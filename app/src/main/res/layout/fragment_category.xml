@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.category.CategoryFragment">
+
+    <!--TODO 10. fragment_category-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Category_Fragment_CardView_Category"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="12dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/Category_Fragment_ImageView_CategoryBg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sample_image_category" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D9770202" />
+
+                    <ImageView
+                        android:id="@+id/Category_Fragment_ImageView_Category"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:padding="16dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/sample_image_category" />
+
+                    <TextView
+                        android:id="@+id/Category_Fragment_TextView_Category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/Category_Fragment_ImageView_Category"
+                        android:layout_toRightOf="@id/Category_Fragment_ImageView_Category"
+                        android:ellipsize="end"
+                        android:maxLines="7"
+                        android:padding="16dp"
+                        android:text="@string/meal_categories"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/Category_Fragment_RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Category_Fragment_CardView_Category"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <ProgressBar
+                android:id="@+id/Category_Fragment_ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Category_Fragment_CardView_Category"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>
